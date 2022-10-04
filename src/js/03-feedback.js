@@ -34,6 +34,10 @@ refs.feedBackForm.addEventListener(
 
 refs.feedBackForm.addEventListener('submit', evt => {
   evt.preventDefault();
+  if (refs.input.value === '' || refs.textArea.value === '') {
+    alert('fill in all the fields');
+    return;
+  }
 
   console.log(dataForSave);
   refs.feedBackForm.reset();
